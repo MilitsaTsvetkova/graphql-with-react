@@ -1,0 +1,40 @@
+circular reference 
+
+
+Fragments
+
+{
+  apple: company(id: "2") {
+    ...companyDetails
+  }
+  google: company(id: "1") {
+    ...companyDetails
+  }
+}
+
+fragment companyDetails on Company {
+  id
+  name
+  description
+}
+
+
+Mutations 
+mutation {
+  createUser(firstName: "Ivan", age: 23) {
+    id
+    firstName
+    age
+  }
+}
+
+  deleteUser(id: "41") {
+    id
+  }
+
+
+  Graphql Clients
+
+  Lokka
+  Apollo Client 
+  Relay
